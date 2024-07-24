@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.24" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
       <PrivateAssets>all</PrivateAssets>
@@ -24,7 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\NewFolder\" />
     <Folder Include="NewFolder\" />
+    <Folder Include="Services\NewFolder\" />
   </ItemGroup>
 
 </Project>

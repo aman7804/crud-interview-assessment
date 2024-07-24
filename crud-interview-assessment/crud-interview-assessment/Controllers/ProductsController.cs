@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using crud_interview_assessment;
+using crud_interview_assessment.Models;
 
 namespace crud_interview_assessment.Controllers
 {
@@ -28,25 +29,19 @@ namespace crud_interview_assessment.Controllers
           {
               return NotFound();
           }
-            return await _context.Products.ToListAsync();
+            return Ok(await _context.Products.ToListAsync());
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-          if (_context.Products == null)
-          {
-              return NotFound();
-          }
-            var product = await _context.Products.FindAsync(id);
+            if (_context.Products == null) return NotFound();
 
-            if (product == null)
-            {
-                return NotFound();
-            }
+            Product product = await _context.Products.FindAsync(id);
 
-            return product;
+            if(product == null) return NotFound();
+            return Ok(product);
         }
 
         // PUT: api/Products/5
@@ -54,10 +49,7 @@ namespace crud_interview_assessment.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(int id, Product product)
         {
-            if (id != product.ProductNo)
-            {
-                return BadRequest();
-            }
+            if (id != product.Id) return BadRequest();
 
             _context.Entry(product).State = EntityState.Modified;
 
@@ -92,7 +84,7 @@ namespace crud_interview_assessment.Controllers
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProduct", new { id = product.ProductNo }, product);
+            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         }
 
         // DELETE: api/Products/5
@@ -117,7 +109,7 @@ namespace crud_interview_assessment.Controllers
 
         private bool ProductExists(int id)
         {
-            return (_context.Products?.Any(e => e.ProductNo == id)).GetValueOrDefault();
+            return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

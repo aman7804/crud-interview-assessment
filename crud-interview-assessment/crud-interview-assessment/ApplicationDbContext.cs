@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using crud_interview_assessment.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace crud_interview_assessment
 {
@@ -8,5 +9,6 @@ namespace crud_interview_assessment
 			: base(options) { }
 
 		public DbSet<Product> Products { get; set; }
+		public DbSet<User> Users { get; set; }
 	}
 }
