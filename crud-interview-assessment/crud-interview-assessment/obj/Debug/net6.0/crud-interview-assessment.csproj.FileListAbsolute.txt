@@ -285,3 +285,8 @@ C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\
 C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\obj\Debug\net6.0\crud-interview-assessment.pdb
 C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\obj\Debug\net6.0\crud-interview-assessment.genruntimeconfig.cache
 C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\obj\Debug\net6.0\ref\crud-interview-assessment.dll
+C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\WIN10\source\repos\crud-interview-assessment\crud-interview-assessment\crud-interview-assessment\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
